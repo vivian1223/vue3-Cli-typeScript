@@ -6,13 +6,20 @@
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import {
+  // defineComponent 是 TypeScript 拿來封裝 setup hook 的一個方法
+  // 透過這個方法可以讓 component 被正確地型別推斷
+  defineComponent,
+} from 'vue';
 
-@Options({
-  components: {
-    HelloWorld,
+export default defineComponent({
+  setup() {
+    type text = string;
+    const count:text = '1';
+    console.log(count);
+    return {
+      count,
+    };
   },
-})
-export default class Home extends Vue {}
+});
 </script>
