@@ -1,4 +1,6 @@
-# vue3-typescript
+# vue3-typescript-cli-basic-environment
+
+In this project, it will indicate some compositon API、TypeScript implement in your daily project, for more information, please check branches mentioned following：
 
 ## Project setup
 ```
@@ -19,6 +21,8 @@ npm run build
 ```
 npm run lint
 ```
+## Vue 3 Compostion API implement
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- branch: feat/setupAndDefineComponent: show how to simply use setup hook and definecomponent function usage
+
+
