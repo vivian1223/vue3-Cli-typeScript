@@ -23,4 +23,6 @@ npm run lint
 ```
 ## Vue 3 Compostion API implement
 
-- branch: feat/setup
+- branch: feat/setupAndDefineComponent: show how to simply use setup hook and definecomponent function usage
+
+
