@@ -21,8 +21,14 @@ npm run build
 ```
 npm run lint
 ```
-## Vue 3 Compostion API implement
+## Vue 3 Compostion API Implement: Branch Guide
 
-- branch: feat/setupAndDefineComponent: show how to simply use setup hook and definecomponent function usage
+- feat/setupAndDefineComponent: show how to simply use setup hook and definecomponent function usage
+
+- feat/pug: show how to use pug in vue cli
+
+- feat/reactive: show how to use reactive
+
+
 
 
