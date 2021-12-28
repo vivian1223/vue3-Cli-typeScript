@@ -12,6 +12,8 @@ table
       td.table__tbody 黃小明
       td.table__tbody 黃金
       td.table__tbody 12304
+input(v-model="email.a")
+pre {{ email }}
 </template>
 
 <script lang="ts">
@@ -20,6 +22,7 @@ import {
   // 透過這個方法可以讓 component 被正確地型別推斷
   defineComponent,
   reactive,
+  ref,
 } from 'vue';
 
 export default defineComponent({
@@ -33,14 +36,22 @@ export default defineComponent({
     }
     // reactive 是以 proxy 為基底實作出來的方法，所以只能透過 reactive 宣告物件型別的變數
     // 沒有透過 reactive 宣告的物件，會因為缺乏 getter 與 setter 而沒有辦法進行雙向綁定
-    const theadInfo:thead = reactive({
+    const theadInfo = reactive<thead>({
       id: '用戶編號',
       name: '用戶名稱',
       rank: '會員等級',
       quota: '消費額度',
     });
+    // 透過 type 設定 input 的型別
+    type input = {
+      a:string
+    }
+    //  ref 定義物件型別
+    // 這裡要注意的的是 ref 沒有辦法被直接覆蓋，不然會失去雙向綁定的功能
+    // 如果要針對 ref 來重新賦值，要透過 email.value = xxx 的方式來進行改變值的動作
+    const email = ref<input>({ a: '請輸入' });
     // 所有需要提供模板或是外層取用的變數、函式都要 return 出去
-    return { theadInfo };
+    return { theadInfo, email };
   },
 });
 </script>

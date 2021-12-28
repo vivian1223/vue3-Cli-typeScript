@@ -29,6 +29,7 @@ npm run lint
 
 - feat/reactive: show how to use reactive
 
+- feat/ref: show how to use vue 3 ref composition API 
 
 
 
