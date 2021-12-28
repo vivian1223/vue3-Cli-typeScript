@@ -27,5 +27,8 @@ npm run lint
 
 - feat/pug: show how to use pug in vue cli
 
+- feat/reactive: show how to use reactive
+
+
 
 
