@@ -23,6 +23,7 @@ import {
   defineComponent,
   reactive,
   ref,
+  watch,
 } from 'vue';
 
 export default defineComponent({
@@ -50,6 +51,7 @@ export default defineComponent({
     // 這裡要注意的的是 ref 沒有辦法被直接覆蓋，不然會失去雙向綁定的功能
     // 如果要針對 ref 來重新賦值，要透過 email.value = xxx 的方式來進行改變值的動作
     const email = ref<input>({ a: '請輸入' });
+    watch(email.value, (newValue, oldValue) => console.log(newValue, oldValue));
     // 所有需要提供模板或是外層取用的變數、函式都要 return 出去
     return { theadInfo, email };
   },
