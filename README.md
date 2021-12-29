@@ -31,7 +31,9 @@ npm run lint
 
 - feat/ref: show how to use vue 3 ref composition API 
 
-- feat/watch: show how to use watch in Vue 3 composition API
+- feat/watch: show how to use watch in Vue 3 composition API, including: single value watch, single value watch, multiple value deep watch
+
+
 
 
 
